@@ -108,27 +108,3 @@ def get_ip_from_name(name, port):
         print "Socket Error: %s" % e
         raise
 
-
-if __name__ == '__main__':
-    def _test():
-        API_KEY ='9a331cfd4cd17e35e6abfa72e9559b56581e84e9d2cd56d7eda15badbd29c74a'
-        API_KEY_FAKE ='9a331cfd4cd17e35e6abfa72e9559b56581e84e9d2cd56d7eda15badbd29c74aMARTIN'
-        api = API(API_KEY)
-        host = str(raw_input('Please enter a site: '))
-        ip = get_ip_from_name(host, 80)
-        print "Retrieving information for (%s)...\n" % host
-        data = api.GetCountry(ip)
-        print "Summary"
-        if data['statusCode'] == 'OK':
-            for k, v in data.iteritems():
-                print "%s: %s" % (k, v)
-        else:
-            print "Error: %s" % data['statusMessage'] 
-
-
-    #call the _test()
-    _test()
-
-
-
-
