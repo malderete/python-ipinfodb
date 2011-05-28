@@ -1,0 +1,14 @@
+
+
+
+KEY = 'SOME_KEY'
+IP = '209.85.195.83'
+
+
+ipinfodb_api = API(KEY)
+
+data_dict = api.GetCity(IP)
+print data_dict
+
+data_dict = api.GetCountry(IP)
+print data_dict
