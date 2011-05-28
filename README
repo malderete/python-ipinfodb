@@ -7,8 +7,8 @@ IP = '209.85.195.83'
 
 ipinfodb_api = API(KEY)
 
-data_dict = api.GetCity(IP)
+data_dict = ipinfodb_api.GetCity(IP)
 print data_dict
 
-data_dict = api.GetCountry(IP)
+data_dict = ipinfodb_api.GetCountry(IP)
 print data_dict
